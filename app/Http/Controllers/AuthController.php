@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Name;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -43,5 +44,15 @@ class AuthController extends Controller
     {   
         auth()->logout;
         return redirect('/login');
+    }
+
+
+
+
+    public function clients()
+    {
+        $names = Name::all();
+        return view('clients', compact('names'));
+
     }
 }
