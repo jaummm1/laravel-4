@@ -51,6 +51,9 @@ class AuthController extends Controller
 
     public function clients()
     {
+
+
+        
         $names = Name::all();
         return view('clients', compact('names'));
 

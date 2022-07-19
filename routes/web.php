@@ -15,11 +15,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/clients', [AuthController::class, 'clients']);  
+
+Route::get('/', [AuthController::class, 'clients']);  
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/register', [AuthController::class, 'register']);
